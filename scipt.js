@@ -8,10 +8,10 @@ function negativePositive() {
     console.log(`${num} is positive`);
   }
 }
-// negativePositive();
+// negativePositive(); // Output: 8 is even an positive
 
-/////////////////////////////////////////////////////////////////
-// 2.Buggy Code (Correct below code)
+//////////////////////////////////  Q2  ////////////////////////////////////////////
+// Buggy Code (Correct below code)
 // Manish created an infinite loop! Help him by fixing the code in the code tab to pass this challenge.
 // Look at the examples below to get an idea of what the function should do.
 
@@ -22,10 +22,10 @@ function printArray(number) {
   }
   return newArray;
 }
-// console.log(printArray(10));
+// console.log(printArray(10)); // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-/////////////////////////////////////////////////////////////////
-// Q3.How Much is True?
+//////////////////////////////////  Q3  ////////////////////////////////////////////
+// How Much is True?
 // Create a function which returns the number of true values there are in an array.
 // Examples
 // countTrue([true, false, false,true, false]) ➞ 2
@@ -41,10 +41,10 @@ function howMuchTrue(arr) {
   }
   console.log(`Number of true = ${count}`);
 }
-// howMuchTrue([true, false, false, true, false]);
-// howMuchTrue([false, false, false, false]);
+// howMuchTrue([true, false, false, true, false]); // Output: Number of true = 2
+// howMuchTrue([false, false, false, false]); // Output: Number of true = 0
 
-/////////////////////////////////////////////////////////////////
+//////////////////////////////////  Q4  ////////////////////////////////////////////
 // Q4.Return Something to Me!
 // Write a function that returns the string "something" joined with a space " " and the given argument a.
 // Examples
@@ -55,10 +55,11 @@ function howMuchTrue(arr) {
 function giveMeSomething(a) {
   return `something ${a}`;
 }
-// console.log(giveMeSomething("is better than nothing"));
-// console.log(giveMeSomething("Bob Jane"));
-// console.log(giveMeSomething("something"));
+// console.log(giveMeSomething("is better than nothing")); // Output: something is better than nothing
+// console.log(giveMeSomething("Bob Jane")); // Output: something Bob Jane
+// console.log(giveMeSomething("something")); // Output: something something
 
+//////////////////////////////////  Q5  ////////////////////////////////////////
 // Q5. Divisibility Checker
 // Write a program(functional approach) to determine if a number is divisible by 4 and 6 but not by 8.
 // Examples:
@@ -73,9 +74,10 @@ function divisibilityChecker(num) {
   }
 }
 
-// console.log(divisibilityChecker(48));
+// console.log(divisibilityChecker(48)); // Output: 48 is not divisible by 4 and 6 but by 8.
 
-// Q6. Positive/Negative Number Checker
+//////////////////////////////////  Q6  ////////////////////////////////////////////
+// Positive/Negative Number Checker
 // Write a program that determines whether a given number is positive or negative using conditional operators
 // Examples:
 // Sample Input: Number: -7
@@ -88,11 +90,12 @@ function positiveNegative(num) {
     return `${num} is negative.`;
   }
 }
-// console.log(positiveNegative(-10));
+// console.log(positiveNegative(-10)); // Output: -10 is negative.
 
-///////////////////////////////////////////////////////////////////
-// Q7. Upvotes vs Downvotes
-// Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed. This is calculated by subtracting the number of downvotes from upvotes.
+//////////////////////////////////  Q7  ////////////////////////////////////////////
+// Upvotes vs Downvotes
+// Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed.
+// This is calculated by subtracting the number of downvotes from upvotes.
 // Examples
 // getVoteCount({ upvotes: 13, downvotes: 0 }) ➞ 13
 // getVoteCount({ upvotes: 2, downvotes: 33 }) ➞ -31
@@ -101,11 +104,11 @@ function positiveNegative(num) {
 function getVoteCount(votes) {
   return votes.upvotes - votes.downvotes;
 }
-// console.log(getVoteCount({ upvotes: 13, downvotes: 0 }));
-// console.log(getVoteCount({ upvotes: 2, downvotes: 33 }));
-// console.log(getVoteCount({ upvotes: 132, downvotes: 132 }));
+// console.log(getVoteCount({ upvotes: 13, downvotes: 0 })); // Output: 13
+// console.log(getVoteCount({ upvotes: 2, downvotes: 33 })); // Output: -31
+// console.log(getVoteCount({ upvotes: 132, downvotes: 132 })); // Output: 0
 
-///////////////////////////////////////////////////////////////////////
+//////////////////////////////////  Q8  ////////////////////////////////////////////
 // Q8. Older Than Me
 // Create a method in the Person class which returns how another person's age compares. Given the instances p1, p2 and p3, which will be initialized with the attributes name and age, return a sentence in the following format:
 // {other person name} is {older than / younger than /the same age as} me.
@@ -116,24 +119,6 @@ function getVoteCount(votes) {
 // p1.compareAge(p2) ➞ "Joel is older than me."
 // p2.compareAge(p1) ➞ "Samuel is younger than me."
 // p1.compareAge(p3) ➞ "Lily is the same age as me."
-
-// class Person {
-//   constructor(name, age) {
-//     this.name = name;
-//     this.age = age;
-//   }
-
-//   compareAge(otherPerson) {
-//     if (this.age < otherPerson.age) {
-//       return `${otherPerson.name} is older than me.`;
-//     } else if (this.age > otherPerson.age) {
-//       return `${otherPerson.name} is younger than me.`;
-//     } else {
-//       return `${otherPerson.name} is the same age as me.`;
-//     }
-//   }
-// }
-
 class Person {
   constructor(name, age) {
     this.name = name;
@@ -155,11 +140,11 @@ const p1 = new Person("Samuel", 24);
 const p2 = new Person("Joel", 36);
 const p3 = new Person("Lily", 24);
 
-console.log(p1.compareAge(p2)); // "Joel is older than me."
-console.log(p2.compareAge(p1)); // "Samuel is younger than me."
-console.log(p1.compareAge(p3)); // "Lily is the same age as me."
+// console.log(p1.compareAge(p2)); // Output: "Joel is older than me."
+// console.log(p2.compareAge(p1)); // Output: "Samuel is younger than me."
+// console.log(p1.compareAge(p3)); // Output: "Lily is the same age as me."
 
-/////////////////////////////////////////////////////////////////////
+//////////////////////////////////  Q9  ////////////////////////////////////////////
 // Q9. Calculate the Total Price of Groceries
 // Create a function that takes an array of objects (groceries) which calculates the total price and returns it as a number. A grocery object has a product, a quantity and a price, for example:
 // {
@@ -204,8 +189,7 @@ function getTotalPrice(groceries) {
   }
   return `Newt Amount = ${newAmt}`;
 }
-
-console.log(getTotalPrice([{ product: "Milk", quantity: 1, price: 1.5 }])); // 1.5
+console.log(getTotalPrice([{ product: "Milk", quantity: 1, price: 1.5 }])); // Output: Newt Amount = 1.5
 console.log(
   getTotalPrice([
     { product: "Milk", quantity: 1, price: 1.5 },
@@ -213,4 +197,34 @@ console.log(
     { product: "Bread", quantity: 2, price: 1.6 },
     { product: "Cheese", quantity: 1, price: 4.5 },
   ])
-);
+); // Output: Newt Amount = 10.4
+
+//////////////////////////////////  Q10  ////////////////////////////////////////////
+// Q10. Weekly Salary
+// Write a function that takes a list of hours and returns the total weekly salary.
+// ● The inputlist hours are listed sequentially, ordered from Monday to Sunday. ● A worker earns $10 an hour for the first 8 hours.
+// ● For every overtime hour, he earns $15.
+// ● On weekends,the employer pays double the usual rate, regardless how many hours were worked previously that week. For instance, 10 hours worked on a weekday would pay 80+30 = $110, but on a weekend it would pay 160+60 = $220.
+// Examples
+// weeklySalary([8, 8, 8, 8, 8, 0, 0]) ➞ 400
+// weeklySalary([10, 10, 10, 0, 8, 0, 0]) ➞ 410
+// weeklySalary([0, 0, 0, 0, 0, 12, 0]) ➞ 280
+
+function weeklySalary(hourArr) {
+  let salary = 0;
+  for (let hour in hourArr) {
+    if (hourArr[hour] <= 8) {
+      salary += hourArr[hour] * 10;
+      // console.log(salary);
+    } else if (hourArr[hour] > 8) {
+      salary += (hourArr[hour] - 8) * 15 + 8 * 10;
+    } else {
+      salary = salary;
+    }
+  }
+  return salary;
+}
+
+console.log(weeklySalary([8, 8, 8, 8, 8, 0, 0])); // Output: 400
+console.log(weeklySalary([10, 10, 10, 0, 8, 0, 0])); // Output: 410
+console.log(weeklySalary([0, 0, 0, 0, 0, 12, 0]));
