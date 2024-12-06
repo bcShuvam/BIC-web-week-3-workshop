@@ -429,15 +429,13 @@ class Shiritori {
   }
 }
 
-let game1 = new Shiritori();
+// let game1 = new Shiritori();
 // game1.play("word");
 // game1.play("dowry");
 // game1.play("yodel");
 // game1.play("leader");
 // game1.play("righteous");
 // game1.play("serpent");
-
-game1.playOnBrowser();
 
 // let game2 = new Shiritori();
 // game2.play("motive");
@@ -447,3 +445,4 @@ game1.playOnBrowser();
 // game2.play("hive");
 // game2.play("eh");
 // game2.play("hive");
+// game3.playOnBrowser();
