@@ -11,7 +11,7 @@ function negativePositive() {
 // negativePositive(); // Output: 8 is even an positive
 
 //////////////////////////////////  Q2  ////////////////////////////////////////////
-// Buggy Code (Correct below code)
+// Q2. Buggy Code (Correct below code)
 // Manish created an infinite loop! Help him by fixing the code in the code tab to pass this challenge.
 // Look at the examples below to get an idea of what the function should do.
 
@@ -25,7 +25,7 @@ function printArray(number) {
 // console.log(printArray(10)); // Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 //////////////////////////////////  Q3  ////////////////////////////////////////////
-// How Much is True?
+// Q3. How Much is True?
 // Create a function which returns the number of true values there are in an array.
 // Examples
 // countTrue([true, false, false,true, false]) ➞ 2
@@ -78,7 +78,7 @@ function divisibilityChecker(num) {
 
 //////////////////////////////////  Q6  ////////////////////////////////////////////
 // Positive/Negative Number Checker
-// Write a program that determines whether a given number is positive or negative using conditional operators
+// Q6. Write a program that determines whether a given number is positive or negative using conditional operators
 // Examples:
 // Sample Input: Number: -7
 // Sample Output: -7 is a negative number
@@ -94,7 +94,7 @@ function positiveNegative(num) {
 
 //////////////////////////////////  Q7  ////////////////////////////////////////////
 // Upvotes vs Downvotes
-// Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed.
+// Q7. Given an object containing counts of both upvotes and downvotes, return what vote count should be displayed.
 // This is calculated by subtracting the number of downvotes from upvotes.
 // Examples
 // getVoteCount({ upvotes: 13, downvotes: 0 }) ➞ 13
@@ -109,8 +109,8 @@ function getVoteCount(votes) {
 // console.log(getVoteCount({ upvotes: 132, downvotes: 132 })); // Output: 0
 
 //////////////////////////////////  Q8  ////////////////////////////////////////////
-// Q8. Older Than Me
-// Create a method in the Person class which returns how another person's age compares. Given the instances p1, p2 and p3, which will be initialized with the attributes name and age, return a sentence in the following format:
+// Older Than Me
+// Q8. Create a method in the Person class which returns how another person's age compares. Given the instances p1, p2 and p3, which will be initialized with the attributes name and age, return a sentence in the following format:
 // {other person name} is {older than / younger than /the same age as} me.
 // Examples
 // p1 = Person("Samuel", 24)
@@ -200,8 +200,8 @@ function getTotalPrice(groceries) {
 // ); // Output: Newt Amount = 10.4
 
 //////////////////////////////////  Q10  ////////////////////////////////////////////
-// Q10. Weekly Salary
-// Write a function that takes a list of hours and returns the total weekly salary.
+// Weekly Salary
+// Q10. Write a function that takes a list of hours and returns the total weekly salary.
 // ● The inputlist hours are listed sequentially, ordered from Monday to Sunday. ● A worker earns $10 an hour for the first 8 hours.
 // ● For every overtime hour, he earns $15.
 // ● On weekends,the employer pays double the usual rate, regardless how many hours were worked previously that week. For instance, 10 hours worked on a weekday would pay 80+30 = $110, but on a weekend it would pay 160+60 = $220.
@@ -235,7 +235,7 @@ function weeklySalary(hourArr) {
 // console.log(weeklySalary([0, 0, 0, 0, 0, 12, 0])); // Output: 280
 
 //////////////////////////////////  Q11  ////////////////////////////////////////////
-// Given an object with students and the grades that they made on the tests that they took,
+// Q11. Given an object with students and the grades that they made on the tests that they took,
 // determine which student has the best Test Average.
 // The key will be the student's name and the value will be an array of their grades.
 // You will only have to return the student's name.
@@ -268,7 +268,6 @@ function getStudentWithBestTestAvg(studObj) {
     if (avgScore > maxScore) {
       maxScore = avgScore;
       studName = stud;
-      // return `${stud} has the best avg test score`;
     }
     avgScore = 0;
   }
@@ -289,8 +288,7 @@ function getStudentWithBestTestAvg(studObj) {
 // ); // Output: John has the best avg test score
 
 //////////////////////////////////  Q12  ////////////////////////////////////////////
-
-// This challenge is an English twist on the Japanese word game Shiritori.
+// Q12. This challenge is an English twist on the Japanese word game Shiritori.
 // The basic premise is to follow two rules:
 // 1. First character of next word must match last character of previous word.
 // 2. The word must not have already been said.
