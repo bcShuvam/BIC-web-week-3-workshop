@@ -377,7 +377,7 @@ class Shiritori {
           break;
         }
       } else {
-        word = prompt("Enter a word").toLowerCase();
+        word = prompt("Welcome to Shiritori Game.\nEnter a word").toLowerCase();
       }
       if (this.words.includes(word)) {
         this.isGameOver = true;
