@@ -382,7 +382,7 @@ class Shiritori {
       if (this.words.includes(word)) {
         this.isGameOver = true;
         alert(`Game over! ${word} already said.`);
-        this.gameOverMessage(`Game over! ${word} already said.`);
+        this.gameOverMessage(`Game over! "${word}" already said.`);
         this.scoreAndWordsMessage();
         console.log(`Game over! ${word} already said.`);
         break;
@@ -407,9 +407,9 @@ class Shiritori {
                 ].at(-1)}. Score = ${this.score}`
               );
               this.gameOverMessage(
-                `Game over! ${word} does not start with ${this.words[
+                `Game over! "${word}" does not start with "${this.words[
                   this.words.length - 1
-                ].at(-1)}.`
+                ].at(-1)}".`
               );
               this.scoreAndWordsMessage();
               console.log(
