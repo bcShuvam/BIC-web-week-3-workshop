@@ -313,6 +313,9 @@ class Shiritori {
     document.write(
       `<h2 style="color: green;">Score = ${this.score}, words = [${this.words}]</h2>`
     );
+    document.write(
+      `<h2 style="color: green;">Reload the browser to restart the game.</h2>`
+    );
   }
 
   outOfTimeMessage() {
@@ -367,7 +370,7 @@ class Shiritori {
       const startTime = Date.now();
       if (this.words.length > 0) {
         word = prompt(
-          `Enter a word starting with ${lastWord} with in 10 seconds`
+          `Enter a word starting with "${lastWord}" with in 10 seconds`
         ).toLowerCase();
         if (Date.now() - startTime >= this.timeOut) {
           this.outOfTimeMessage();
@@ -439,8 +442,8 @@ class Shiritori {
 // game2.play("motive");
 // game2.play("beach");
 
-// let game3 = new Shiritori();
+let game3 = new Shiritori();
 // game2.play("hive");
 // game2.play("eh");
 // game2.play("hive");
-// game3.playOnBrowser();
+game3.playOnBrowser();
