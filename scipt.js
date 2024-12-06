@@ -202,7 +202,7 @@ function getTotalPrice(groceries) {
     // console.log(groceries[grocery]);
     newAmt += groceries[grocery].quantity * groceries[grocery].price;
   }
-  return `newAmt`;
+  return `Newt Amount = ${newAmt}`;
 }
 
 console.log(getTotalPrice([{ product: "Milk", quantity: 1, price: 1.5 }])); // 1.5
