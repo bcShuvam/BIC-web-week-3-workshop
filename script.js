@@ -146,7 +146,8 @@ const p3 = new Person("Lily", 24);
 
 //////////////////////////////////  Q9  ////////////////////////////////////////////
 // Q9. Calculate the Total Price of Groceries
-// Create a function that takes an array of objects (groceries) which calculates the total price and returns it as a number. A grocery object has a product, a quantity and a price, for example:
+// Create a function that takes an array of objects (groceries) which calculates the total price and returns it as a number.
+// A grocery object has a product, a quantity and a price, for example:
 // {
 // "product": "Milk",
 // "quantity": 1,
@@ -190,6 +191,7 @@ function getTotalPrice(groceries) {
   return `Newt Amount = ${newAmt}`;
 }
 // console.log(getTotalPrice([{ product: "Milk", quantity: 1, price: 1.5 }])); // Output: Newt Amount = 1.5
+// console.log(getTotalPrice([{ product: "Milk", quantity: 3, price: 1.5 }])); // Output: Newt Amount = 4.5
 // console.log(
 //   getTotalPrice([
 //     { product: "Milk", quantity: 1, price: 1.5 },
@@ -198,6 +200,12 @@ function getTotalPrice(groceries) {
 //     { product: "Cheese", quantity: 1, price: 4.5 },
 //   ])
 // ); // Output: Newt Amount = 10.4
+// console.log(
+//   getTotalPrice([
+//     { product: "Chocolate", quantity: 1, price: 0.1 },
+//     { product: "Lollipop", quantity: 1, price: 0.2 },
+//   ])
+// ); // Output: Newt Amount = 0.30
 
 //////////////////////////////////  Q10  ////////////////////////////////////////////
 // Weekly Salary
@@ -307,21 +315,18 @@ class Shiritori {
     document.write(`<h1 style="color: green;">valid word!</h1>`);
   }
   gameOverMessage(msg, word) {
-    document.write(`<h1 style="color: red;">${msg}</h1>`);
+    document.getElementsByClassName("msg-game-over")[0].innerHTML = `${msg}`;
   }
   scoreAndWordsMessage() {
-    document.write(
-      `<h2 style="color: green;">Score = ${this.score}, words = [${this.words}]</h2>`
-    );
-    document.write(
-      `<h2 style="color: green;">Reload the browser to restart the game.</h2>`
-    );
+    document.getElementsByClassName(
+      "msg-game-score"
+    )[0].innerHTML = `Score = ${this.score}, words = [ ${this.words} ]`;
   }
 
   outOfTimeMessage() {
-    document.write(
-      `<h2 style="color: red;">Game over. You are out of time.</h2>`
-    );
+    document.getElementsByClassName(
+      "msg-game-over"
+    )[0].innerHTML = `Game over. You are out of time.`;
     this.scoreAndWordsMessage();
   }
   play(word) {
@@ -364,6 +369,10 @@ class Shiritori {
   }
 
   playOnBrowser() {
+    // Resetting game variables
+    this.words = [];
+    this.isGameOver = false;
+    this.score = 0;
     let word;
     let lastWord;
     while (true) {
@@ -446,4 +455,3 @@ let game3 = new Shiritori();
 // game2.play("hive");
 // game2.play("eh");
 // game2.play("hive");
-game3.playOnBrowser();
