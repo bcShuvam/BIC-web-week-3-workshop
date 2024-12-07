@@ -375,6 +375,7 @@ class Shiritori {
     this.score = 0;
     let word;
     let lastWord;
+
     while (true) {
       const startTime = Date.now();
       if (this.words.length > 0) {
